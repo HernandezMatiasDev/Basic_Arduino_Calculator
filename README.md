@@ -1,10 +1,13 @@
 Informe:
+
 Trabajo Práctico de laboratorio
 
 Organización y Arquitectura de computadoras
+
 Comisión 4
 
 Matias Nicolas Hernandez
+
 DNI: 45327037
 
 
