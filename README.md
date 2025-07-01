@@ -4,7 +4,7 @@ Trabajo Práctico de laboratorio
 
 Organización y Arquitectura de computadoras
 
-Comisión 4
+Comisión 7
 
 Matias Nicolas Hernandez
 
