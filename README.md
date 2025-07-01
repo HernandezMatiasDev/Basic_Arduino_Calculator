@@ -64,9 +64,9 @@ Programacion:
 
 Bibliotecas Utilizadas
 
-
-#include <Keypad.h>
-#include <LiquidCrystal.h>
+	
+	#include <Keypad.h>
+	#include <LiquidCrystal.h>
 
 
 Keypad.h: Permite gestionar un teclado matricial (keypad) con filas y columnas conectadas a pines digitales. Facilita la lectura de teclas presionadas mediante un mapeo.
@@ -76,7 +76,7 @@ LiquidCrystal.h: Maneja pantallas LCD de tipo HD44780. Proporciona funciones com
 Inicialización del LCD:
 
 
-LiquidCrystal lcd(1, 0, A1, A2, 10, 9);
+	LiquidCrystal lcd(1, 0, A1, A2, 10, 9);
 
 
 Se declara un objeto lcd que define la conexión a la pantalla. Los parámetros son los pines conectados al LCD.      
@@ -86,18 +86,18 @@ El LCD tendrá 2 filas y 16 columnas.
 Configuración del Teclado Matricial
 
 
-const byte ROWS = 4;
-const byte COLS = 4;
+	const byte ROWS = 4;
+	const byte COLS = 4;
 
 Se especifica un teclado de 4 filas x 4 columnas (16 teclas en total).
 
 
-char keys[ROWS][COLS] = {
-  {'7','8','9','D'},
-  {'4','5','6','M'},
-  {'1','2','3','S'},
-  {'C','0','E','A'}
-};
+	char keys[ROWS][COLS] = {
+	  {'7','8','9','D'},
+	  {'4','5','6','M'},
+	  {'1','2','3','S'},
+	  {'C','0','E','A'}
+	};
 
 Se define el mapa de teclas según su disposición física en el teclado.
 
@@ -118,9 +118,10 @@ Leyenda:
 	 
 
 
-byte rowPins[ROWS] = {12,11,8,7};
-byte colPins[COLS] = {6,5,4,2};
-Keypad keypad = Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS);
+	
+	byte rowPins[ROWS] = {12,11,8,7};
+	byte colPins[COLS] = {6,5,4,2};
+	Keypad keypad = Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS);
 
 
 Se define la conexión física del teclado con los pines del microcontrolador.
@@ -129,13 +130,13 @@ Se crea el objeto keypad utilizando la función makeKeymap().
 
 Variables Globales
 
-
-String num1 = "";
-String num2 = "";
-String lastResult = "";
-bool currentNumber = false;
-bool error = false;
-char operation = ' ';
+	
+	String num1 = "";
+	String num2 = "";
+	String lastResult = "";
+	bool currentNumber = false;
+	bool error = false;
+	char operation = ' ';
 
 
 num1: Guarda el primer número ingresado.
@@ -152,9 +153,11 @@ Error: Bandera de error (por ejemplo, división por cero). Esto es para no poder
 
 
  Función setup()
-void setup() {
-  lcd.begin(16, 2);
-}
+
+ 
+	void setup() {
+	  lcd.begin(16, 2);
+	}
 
 
 Inicializa el LCD en modo 16x2 (16 columnas, 2 filas).
@@ -163,13 +166,15 @@ Inicializa el LCD en modo 16x2 (16 columnas, 2 filas).
 Función Principal loop()
 
 
-void loop() {
-  char key = keypad.getKey();
-Se consulta si se presionó una tecla.
+	void loop() {
+	  char key = keypad.getKey();
+	Se consulta si se presionó una tecla.
+
 
 Manejo de Teclas Especiales
-if (key) {
-    switch (key) {
+
+	if (key) {
+	    switch (key) {
 
 
 
@@ -177,11 +182,6 @@ Se evalúa la tecla presionada, dividiendo el tratamiento en 3 grupos:
 
 
  Tecla C - Clear (Reset)
-
- 
-  if (key) {
-    switch (key) {
-
 
       case 'C':
         lcd.clear();
@@ -201,6 +201,8 @@ Termina el loop() para evitar procesamiento adicional.
 
 
 Operadores Aritméticos ('D', 'M', 'S', 'A')
+
+
       case 'D':
       case 'M':
       case 'S':
@@ -209,6 +211,8 @@ Operadores Aritméticos ('D', 'M', 'S', 'A')
 
 
 Se interpreta la operación elegida.
+
+
           lcd.clear();
           lcd.print(num1);
           operation = key;
@@ -234,6 +238,8 @@ Tecla “=”
 
       case 'E':
         if (operation == ' ' || num1 == "" || num2 == "") return;
+
+ 
 Verifica si la operación es válida (no vacía), y si existe tanto num1 como num2.
 
 
@@ -283,23 +289,23 @@ Se muestra el resultado o mensaje de error en la segunda línea del LCD:
 Se llama a reset() al finalizar para reiniciar los operandos.
 
 
-Ingreso de Números (0–9)
-    switch (key) {
-      case '0'...'9':
-        if (!currentNumber) {
-          error = false;
-          num1 += key;
-          lastResult = num1;
-          lcd.clear();
-          lcd.print(num1);
-        } else {
-          num2 += key;
-          lcd.print(key);
-        }
-        break;
-    }
-  }
-}
+	Ingreso de Números (0–9)
+	    switch (key) {
+	      case '0'...'9':
+	        if (!currentNumber) {
+	          error = false;
+	          num1 += key;
+	          lastResult = num1;
+	          lcd.clear();
+	          lcd.print(num1);
+	        } else {
+	          num2 += key;
+	          lcd.print(key);
+	        }
+	        break;
+	    }
+	  }
+	}
 
 
 Se evalúa si la tecla ingresada es un dígito.
@@ -311,15 +317,16 @@ Si ya se seleccionó operación, se agrega el número a num2 y se imprime direct
 Función Auxiliar reset()
 
 
-void reset() {
-  num1 = "";
-  num2 = "";
-  operation = ' ';
-  currentNumber = false;
-}
+	void reset() {
+	  num1 = "";
+	  num2 = "";
+	  operation = ' ';
+	  currentNumber = false;
+	}
 
 
 Restablece el estado interno de la calculadora, excepto lastResult
+
 
 Resumen General del Funcionamiento:
 
