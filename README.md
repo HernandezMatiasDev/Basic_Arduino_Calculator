@@ -328,6 +328,7 @@ Función Auxiliar reset()
 Restablece el estado interno de la calculadora, excepto lastResult
 
 
+
 Resumen General del Funcionamiento:
 
 Al iniciar, se ingresan números que forman num1.
@@ -341,6 +342,9 @@ Si se presiona C, se reinicia todo el sistema.
 El último resultado puede reutilizarse en operaciones siguientes.
 
 Más adelante desarrollo estas funciones con más profundidad.
+
+
+
 
 
 
