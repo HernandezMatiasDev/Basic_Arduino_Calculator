@@ -12,7 +12,7 @@ DNI: 45327037
 
 
 
-Aplicación de calculadora simple en C sobre microcontrolador ATmega328p (Arduino Uno)
+Aplicación de calculadora simple en Arduino sobre microcontrolador ATmega328p (Arduino Uno)
 
 
 ![image](https://github.com/user-attachments/assets/775b2b1d-ca08-4bd4-a3b2-43b2066c1ee1)
