@@ -212,7 +212,6 @@ Operadores Aritméticos ('D', 'M', 'S', 'A')
 
 
 
-Se interpreta la operación elegida.
 
 
           lcd.clear();
