@@ -14,6 +14,7 @@ DNI: 45327037
 
 Aplicación de calculadora simple en C sobre microcontrolador ATmega328p (Arduino Uno)
 
+
 ![image](https://github.com/user-attachments/assets/775b2b1d-ca08-4bd4-a3b2-43b2066c1ee1)
 
 
@@ -26,6 +27,8 @@ La implementación de la calculadora se basa en la utilización del display lcd 
 Tanto los videos del campus como la búsqueda de información fueron cruciales al comienzo, ya que si bien en el kit dado por la cátedra ya tenía conexiones con la placa arduino, terminar de entender los componentes a utilizar fue la primera gran barrera.
 
 Display LCD
+
+
 ![image](https://github.com/user-attachments/assets/c5cf44cd-392b-44e5-a3a7-90b9fbc0d9a0)
 
 
@@ -37,6 +40,8 @@ Los pines 3 a 6 RS, RW y E, son pines de control, los cuales habilitan o control
 
 
 Teclado Matricial
+
+
 ![image](https://github.com/user-attachments/assets/083531f8-8292-48b7-b326-e902e4513596)
 
 
