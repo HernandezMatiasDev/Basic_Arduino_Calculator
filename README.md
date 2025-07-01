@@ -180,7 +180,7 @@ Manejo de Teclas Especiales
 
 
 
-Se evalúa la tecla presionada, dividiendo el tratamiento en 3 grupos:
+Se evalúa la tecla presionada:
 
 
  Tecla C - Clear (Reset)
