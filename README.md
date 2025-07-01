@@ -219,7 +219,7 @@ Se muestra num1:
           operation = key;
           currentNumber = true;
 
-
+y se setea currentNumber a true para poder ingresar el segundo número
 Luego se imprime el símbolo de operación:
 
 
@@ -230,7 +230,6 @@ Luego se imprime el símbolo de operación:
             case 'A': lcd.print(" + "); break;
           }
 
-y se setea currentNumber a true para poder ingresar el segundo número
 
 
 
