@@ -119,6 +119,7 @@ Leyenda:
 	A: ADD, Suma
 	 
 
+Se define la conexión física del teclado con los pines del microcontrolador.
 
 	
 	byte rowPins[ROWS] = {12,11,8,7};
@@ -126,7 +127,6 @@ Leyenda:
 	Keypad keypad = Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS);
 
 
-Se define la conexión física del teclado con los pines del microcontrolador.
 
 Se crea el objeto keypad utilizando la función makeKeymap().
 
@@ -212,7 +212,7 @@ Operadores Aritméticos ('D', 'M', 'S', 'A')
 
 
 
-
+Se muestra num1:
 
           lcd.clear();
           lcd.print(num1);
@@ -220,7 +220,7 @@ Operadores Aritméticos ('D', 'M', 'S', 'A')
           currentNumber = true;
 
 
-Se muestra num1, luego se imprime el símbolo de operación:
+Luego se imprime el símbolo de operación:
 
 
           switch (key) {
