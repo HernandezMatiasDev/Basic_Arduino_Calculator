@@ -79,7 +79,9 @@ Inicialización del LCD:
 	LiquidCrystal lcd(1, 0, A1, A2, 10, 9);
 
 
-Se declara un objeto lcd que define la conexión a la pantalla. Los parámetros son los pines conectados al LCD.      
+Se declara un objeto lcd que define la conexión a la pantalla.
+
+Los parámetros son los pines conectados al LCD.      
 
 El LCD tendrá 2 filas y 16 columnas.
 
